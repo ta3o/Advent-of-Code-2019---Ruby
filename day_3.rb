@@ -87,11 +87,11 @@ paths = File.readlines('day_3_input.txt');
 path_a = paths[0]
 path_b = paths[1]
 
-instersections = get_coordinates(path_a) & get_coordinates(path_b)
+intersections = get_coordinates(path_a) & get_coordinates(path_b)
 
 steps = []
 
-instersections.each do |intersection|
+intersections.each do |intersection|
   steps_for_a = calculate_steps(path_a, intersection)
   steps_for_b = calculate_steps(path_b, intersection)
   steps.push(steps_for_a + steps_for_b)
